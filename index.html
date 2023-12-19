@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSIKCITY</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .navbar { background-color: #000080; padding: 10px; }
+  .navbar a { color: white; padding: 14px 20px; text-decoration: none; }
+  .navbar-logo { height: 50px; width: auto; }
+  .main-content { display: flex; }
+  .left-section { background-color: #0000FF; color: white; padding: 20px; width: 50%; }
+  .right-section { background-color: #00008B; color: white; padding: 20px; width: 50%; }
+  .platforms { display: flex; flex-direction: column; align-items: center; padding: 20px; }
+  .platforms img { width: 50px; height: 50px; }
+  .platform-item { display: flex; align-items: center; gap: 10px; }
+  .component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  /* Tela 2 */
+  .site-channels {
+    background-color: white;
+    color: #0000FF;
+    padding: 20px;
+  }
+  .site-channels h2 {
+    color: black;
+  }
+  .site-channels ul {
+    list-style: none;
+    padding: 0;
+  }
+  .site-channels li {
+    margin-bottom: 10px;
+  }
+/* Tela 3 */
+.our-productions {
+  background-color: #0000FF;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
+}
+
+.our-productions h2 {
+  color: yellow;
+}
+
+.production-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.production-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.production-item p {
+  margin: 0;
+}
+
+/* segunda div dos items a direita */
+.our-productions2 {
+  background-color: #0000FF;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.production-item2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.production-item2 img {
+  width: 100px; 
+  height: auto;
+  margin-left: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <img class="navbar-logo" src="img/icons/logo_musikcity.png" alt="Spotify">
+  <a href="#artistas">Artistas</a>
+  <a href="#producoes">Produções</a>
+  <a href="#radios">Radios</a>
+  <a href="#servicos">Serviços</a>
+</div>
+
+<div class="main-content">
+  <div class="left-section">
+    <p>Arranjador e produtor musical com experiência em gravação e arranjos. Tenho muitos contatos no meio musical e faço parceria com letristas. Também divulgo trabalhos para rádios e gravadoras.</p>
+    <div class="component">
+      <button>Sobre Nós</button>
+      <p>Visitantes: + 144 milhões</p>
+    </div>
+  </div>
+  
+  <div class="right-section">
+    <p>OUÇA NOSSAS PRODUÇÕES EM</p>
+    <div class="platforms">
+      <div class="platform-item">
+        <img src="img/icons/youtube.png" alt="YouTube">
+        <span>YouTube</span>
+      </div>
+      <div class="platform-item">
+        <img src="img/icons/spotify.png" alt="Spotify">
+        <span>Spotify</span>
+      </div>
+      <div class="platform-item">
+        <img src="img/icons/deezer.png" alt="Deezer">
+        <span>Deezer</span>
+      </div>
+      <div class="platform-item">
+        <img src="img/icons/pandora.png" alt="Pandora">
+        <span>Pandora</span>
+      </div>
+      <div class="platform-item">
+        <img src="img/icons/tik-tok.png" alt="TikTok">
+        <span>TikTok</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-channels">
+    <h2>CANAIS DO SITE</h2>
+    <p>Escolha um dos canais abaixo ou continue lendo para mais informações.</p>
+    <ul>
+      <li>Consultoria Musical</li>
+      <li>Divulgar suas Músicas</li>
+      <li>Divulgação para Gravadoras e Produtores</li>
+      <li>Gravação e Arranjos</li>
+      <li>Parceria para Letristas Amadores e Poetas</li>
+      <li>Partitura e Registro de Música e Letra</li>
+      <li>Rádios do Brasil AO VIVO</li>
+    </ul>
+  </div>
+  <div class="our-productions">
+    <h2>NOSSAS PRODUÇÕES</h2>
+    <div class="production-item">
+      <img src="img/artistas/sandy.jpg" alt="Descrição da Imagem">
+      <p>A trilha do filme "Quando Eu Era Vivo" de 2014 com Antonio Fagundes & Sandy possui música de autoria, arranjada e produzida por Hugo Bellard.</p>
+    </div>
+    <div class="production-item2">
+      <img src="img/artistas/sidney_magal.jpg" alt="Descrição da Imagem">
+      <p>O sucesso "Meu Sangue Ferve Por Você" com Sidney Magal é arranjo de Hugo Bellard em gravação para a Universal Music - Polygram.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/elizangela.jpg" alt="Descrição da Imagem">
+      <p>Elizangela gravou a música mais vendida em compacto simples no Brasil em todos os tempos: "Pertinho de Você", em produção, arranjo e autoria de Hugo Bellard.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/wando_mini.jpg" alt="Descrição da Imagem">
+      <p>O cantor Wando gravou "Me Cace Me Ache", de Hugo Bellard e Paulo Sérgio Valle, além de outra música da dupla - "Não Posso Ser Teu Amigo".
+        O album foi o de maior vendagem na carreira do Wando.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/peninhanew.jpg" alt="Descrição da Imagem">
+      <p>O sucesso e disco de platina 'Sonhos' (peninha) é mais um arranjo de Hugo Bellard.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/jose_augusto.jpg" alt="Descrição da Imagem">
+      <p>O cantor José Augusto gravou seus primeiros grandes sucessos com arranjos de Hugo Bellard na Emi.
+        Dois deles, a música "Meu Primeiro Amor" (Mi Primer Amor) e Candilejas, entraram na parada do México e na latina da Billboard vendendo mais de dois milhão de álbuns em 5 países.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/fernandomendes.jpg" alt="Descrição da Imagem">
+      <p>Hugo Bellard fez o arranjo de "Você Não Me Ensinou a Te Esquecer" do Fernando Mendes que está ao lado dele na foto.
+        A música foi mais tarde regravada pelo Caetano Veloso.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/mariozinho_rocha.jpg" alt="Descrição da Imagem">
+      <p>Mariozinho Rocha Até pouco tempo era o Diretor musical das novelas da TV Globo. Agora ocupa a presidência da ABRAMUS, Sociedade de Compositores ligada ao Ecade.
+        Por isso ainda mantém uma grande influência no envio de músicas para as novelas.
+        
+        Foi Mariozinho quem indicou o Hugo Bellard para fazer o arranjo original da consagrada Música anual de Natal da TV Globo.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/roupa_nova_mini.jpg" alt="Descrição da Imagem">
+      <p>Nando e Kiko, da banda Roupa Nova, tendo ao centro o produtor e maestro Hugo Bellard, em foto recente na casa de um deles.
+        Música de Hugo Bellard cantada pelo Serginho do Roupa Nova, entrou na novela Pecado Rasgado.</p>
+    </div>
+    <div class="production-item">
+      <img src="img/artistas/jorge_ben_jor.jpg" alt="Descrição da Imagem">
+      <p>Com arranjos do maestro Hugo Bellard, responsável pelo site MusikCity, o album "Tábuas das Esmeraldas" de Jorge Ben Jor foi eleito pela revista inglesa Rolling Stones como um dos 6 melhores álbuns gravados no Brasil em todos os tempos.</p>
+    </div>
+    
+  </div>
+</body>
+</html>
