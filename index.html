@@ -3,15 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <title>MUSIKCITY</title>
 <style>
   body { font-family: Arial, sans-serif; }
-  .navbar { background-color: #000080; padding: 10px; }
-  .navbar a { color: white; padding: 14px 20px; text-decoration: none; }
-  .navbar-logo { height: 50px; width: auto; }
+  .navbar {
+    background-color: #1e74e6;
+    padding: 10px;
+    display: flex; 
+    align-items: center; 
+  }
+
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar-logo {
+    height: 50px;
+    width: auto;
+  }
   .main-content { display: flex; }
-  .left-section { background-color: #0000FF; color: white; padding: 20px; width: 50%; }
-  .right-section { background-color: #00008B; color: white; padding: 20px; width: 50%; }
+  .left-section { background-color: #1e74e6; color: white; padding: 20px; width: 50%; }
+  .right-section { background-color: #348ee2; color: white; padding: 20px; width: 50%; }
   .platforms { display: flex; flex-direction: column; align-items: center; padding: 20px; }
   .platforms img { width: 50px; height: 50px; }
   .platform-item { display: flex; align-items: center; gap: 10px; }
@@ -45,10 +60,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alinha à esquerda */
-}
-
-.our-productions h2 {
-  color: yellow;
 }
 
 .production-item {
@@ -104,20 +115,122 @@
 
 .collaborations-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
 }
 
 .collaboration-item {
   text-align: center;
+  position: relative;
 }
 
 .collaboration-item img {
-  width: 100px;
-  height: 100px;
+  display: block;
+  width: 100%;
+  height: 100%; 
+  min-height: 150px; 
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  /* padding: 3px; */
+  border-radius: 0px 0px 10px 10px;
+  box-sizing: border-box;
+}
+
+.participacoes {
+  color: blue;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.especiais {
+  color: black;
+  font-weight: lighter;
+}
+
+.nossas {
+  color: black;
+  font-weight: lighter;
+}
+
+.producoes {
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.canais {
+  color: blue;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.site {
+  color: black;
+  font-weight: lighter;
+}
+
+.historia-container{
+  background-color: blue;
+}
+
+.historia-title {
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.nossa-title {
+  color: black;
+  font-weight: lighter;
+}
+
+.collaborations-grid-historia {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.collaboration-item-historia {
+  text-align: center;
+  position: relative;
+}
+
+.collaboration-item-historia img {
+  display: block;
+  width: 100%;
+  height: 100%; 
+  min-height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.text-container-historia {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+}
+
+.copyright{
+  background-color: blue;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
 }
 
 </style>
@@ -125,7 +238,7 @@
 <body>
 
 <div class="navbar">
-  <img class="navbar-logo" src="img/icons/logo_musikcity.png" alt="Spotify">
+  <img class="navbar-logo" src="img/icons/logo_musikcity.png">
   <a href="#artistas">Artistas</a>
   <a href="#producoes">Produções</a>
   <a href="#radios">Radios</a>
@@ -134,12 +247,13 @@
 
 <div class="main-content">
   <div class="left-section">
-    <p>Arranjador e produtor musical com experiência em gravação e arranjos. Tenho muitos contatos no meio musical e faço parceria com letristas. Também divulgo trabalhos para rádios e gravadoras.</p>
+    <p><h1>Arranjador e produtor musical com experiência em gravação e arranjos. Tenho muitos contatos no meio musical e faço parceria com letristas. Também divulgo trabalhos para rádios e gravadoras.</h1></p>
     <div class="component">
-      <button>Sobre Nós</button>
-      <p>Visitantes: + 144 milhões</p>
+        <button style="border-radius: 10px; background-color: #333; color: white;">Sobre Nós</button>
+      <p><span style="color: white;">Visitantes:</span><span style="color: black;"> + 144 milhões</span></p></p>
     </div>
   </div>
+
   
   <div class="right-section">
     <p>OUÇA NOSSAS PRODUÇÕES EM</p>
@@ -168,20 +282,24 @@
   </div>
 </div>
 <div class="site-channels">
-    <h2>CANAIS DO SITE</h2>
-    <p>Escolha um dos canais abaixo ou continue lendo para mais informações.</p>
-    <ul>
-      <li>Consultoria Musical</li>
-      <li>Divulgar suas Músicas</li>
-      <li>Divulgação para Gravadoras e Produtores</li>
-      <li>Gravação e Arranjos</li>
-      <li>Parceria para Letristas Amadores e Poetas</li>
-      <li>Partitura e Registro de Música e Letra</li>
-      <li>Rádios do Brasil AO VIVO</li>
+  <h2><span class="canais">CANAIS</span> <span class="site">DO SITE</span></h2>
+    <h3><p style="color: black";>Escolha um dos canais abaixo ou continue lendo para mais informações.</p></h3>
+    <ul style="padding-left: 20px;">
+        <h1>
+            <li style="color: black;">Consultoria Musical</li>
+            <li style="color: black;">Divulgar suas Músicas</li>
+            <li style="color: black;">Divulgação para Gravadoras e Produtores</li>
+            <li style="color: black;">Gravação e Arranjos</li>
+            <li style="color: black;">Parceria para Letristas Amadores e Poetas</li>
+            <li style="color: black;">Partitura e Registro de Música e Letra</li>
+            <li style="color: black;">Rádios do Brasil AO VIVO</li>
+        </h1>
     </ul>
-  </div>
-  <div class="our-productions">
-    <h2>NOSSAS PRODUÇÕES</h2>
+</div>
+  
+  
+<div class="our-productions">
+  <h2><span class="nossas">NOSSAS</span> <span class="producoes">PRODUÇÕES</span></h2>
     <div class="production-item">
       <img src="img/artistas/sandy.jpg" alt="Descrição da Imagem">
       <p>A trilha do filme "Quando Eu Era Vivo" de 2014 com Antonio Fagundes & Sandy possui música de autoria, arranjada e produzida por Hugo Bellard.</p>
@@ -229,76 +347,142 @@
       <img src="img/artistas/jorge_ben_jor.jpg" alt="Descrição da Imagem">
       <p>Com arranjos do maestro Hugo Bellard, responsável pelo site MusikCity, o album "Tábuas das Esmeraldas" de Jorge Ben Jor foi eleito pela revista inglesa Rolling Stones como um dos 6 melhores álbuns gravados no Brasil em todos os tempos.</p>
     </div>
-<!-- Participações nas produçoes -->
+  </div>
+<!-- Participações nas produções -->
 <div class="participacoes">
-      <h2>Participações Especiais</h2>
-      <p>Confira nossas colaborações especiais com artistas renomados:</p>
-      <div class="collaborations-grid">
-        <div class="collaboration-item">
-          <img src="img/participacoes/raulseixas.jpg">
-          <p>Raul Seixas</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/jorge-benjor2.jpg">
-          <p>Jorge Ben Jor</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/timmaia.jpg">
-          <p>Tim Maia</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/rosemary.jpg">
-          <p>Rosemary</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/ivan-lins.jpg">
-          <p>Ivan Lins</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/sidney_magal2.jpg">
-          <p>Sidney Magal</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/peninhanew.jpg">
-          <p>Peninha (Sonhos)</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/wando_mini3.jpg">
-          <p>Wando</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/jose-augusto.jpg">
-          <p>José Augusto</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/limaonew.jpg">
-          <p>Limao com Mel</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/luizmelodia.jpg">
-          <p>Luiz Melodia</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/ayrao.jpg">
-          <p>Luis Ayrão</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/rosana.jpg">
-          <p>Rosana</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/lenynew.jpg">
-          <p>Leny Andrade</p>
-        </div>
-        <div class="collaboration-item">
-          <img src="img/participacoes/carlos_lyra.jpg ">
-          <p>Carlos Lyra</p>
-        </div>
+  <h2><span class="participacoes">PARTICIPAÇÕES</span> <span class="especiais">NAS PRODUÇÕES</span></h2>
+  <p>Alguns exemplos dos arranjos, produções, autorias, teclados e participações nas gravações do produtor e maestro Hugo Bellard</p>
+  <div class="collaborations-grid">
+    <div class="collaboration-item">
+      <img src="img/participacoes/raulseixas.jpg">
+      <div class="text-container">
+        <p>Raul Seixas</p>
       </div>
     </div>
-    
-    
-    
+    <div class="collaboration-item">
+      <img src="img/participacoes/jorge-benjor2.jpg">
+      <div class="text-container">
+        <p>Jorge Ben Jor</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/timmaia.jpg">
+      <div class="text-container">
+        <p>Tim Maia</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/rosemary.jpg">
+      <div class="text-container">
+        <p>Rosemary</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/ivan-lins.jpg">
+      <div class="text-container">
+        <p>Ivan Lins</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/sidney_magal2.jpg">
+      <div class="text-container">
+        <p>Sidney Magal</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/peninhanew.jpg">
+      <div class="text-container">
+        <p>Peninha</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/wando_mini3.jpg">
+      <div class="text-container">
+        <p>Wando</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/jose-augusto.jpg">
+      <div class="text-container">
+        <p>José Augusto</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/limaonew.jpg">
+      <div class="text-container">
+        <p>Limao com Mel</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/luizmelodia.jpg">
+      <div class="text-container">
+        <p>Luiz Melodia</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/ayrao.jpg">
+      <div class="text-container">
+        <p>Luis Ayrão</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/rosana.jpg">
+      <div class="text-container">
+        <p>Rosana</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/lenynew.jpg">
+      <div class="text-container">
+        <p>Leny Andrade</p>
+      </div>
+    </div>
+    <div class="collaboration-item">
+      <img src="img/participacoes/carlos_lyra.jpg ">
+      <div class="text-container">
+        <p>Carlos Lyra</p>
+      </div>
+    </div>
+    <button style="border-radius: 20px; background-color: black; color: white; padding: 10px;">Ver Todos</button>
+</div>
+
+<div class="historia-container">
+    <h2><span class="nossa-title">A NOSSA</span> <span class="historia-title">HISTÓRIA</span></h2>
+    <p>Alguns exemplos dos arranjos, produções, autorias, teclados e participações nas gravações do produtor e maestro Hugo Bellard</p>
+</div>
+<div class="collaborations-grid-historia">
+  <div class="collaboration-item-historia">
+    <img src="img/nossa_historia/hugonoguto.jpg">
+    <div class="text-container-historia">
+      <p>Foto tirada no estúdio do Gutto Graça Melo em uma mixagem em 2015.</p>
+    </div>
   </div>
+  <div class="collaboration-item-historia">
+    <img src="img/nossa_historia/claudia_leite.jpg">
+    <div class="text-container-historia">
+      <p>Na foto Claudia Leite ao lado de Sabrina Niskier, assistente do  maestro Hugo Bellard.</p>
+    </div>
+  </div>
+  <div class="collaboration-item-historia">
+    <img src="img/nossa_historia/hugo_bellard.jpg">
+    <div class="text-container-historia">
+      <p>Na foto o produtor Hugo Bellard rege nos estúdios da Universal 
+        Polygram o seu arranjo de 
+        "Sonhos", sucesso que alcançou
+        o Disco de Platina pela imensa 
+        vendagem.</p>
+    </div>
+  </div>
+  <div class="collaboration-item-historia">
+    <img src="img/nossa_historia/ricardo_feghali.jpg">
+    <div class="text-container-historia">
+      <p>Na foto acima o maestro Hugo Bellard na casa do Ricardo Feghali que é integrante e produtor do Roupa Nova, Aline Barros e outros.</p>
+    </div>
+  </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright © 2023 Musikcity - Todos os direitos reservados.</p>
+</div>
 </body>
 </html>
