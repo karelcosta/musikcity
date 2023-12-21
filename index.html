@@ -73,10 +73,12 @@
   width: 100px;
   height: auto;
   margin-right: 10px;
+  border-radius: 8px;
 }
 
 .production-item p {
   margin: 0;
+  font-size: 20px;
 }
 
 /* segunda div dos items a direita */
@@ -89,24 +91,50 @@
   align-items: flex-end;
 }
 
+.container-production {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .botao-ver-todas {
+        border-radius: 40px;
+        background-color: black;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        pointer-events: none; 
+        margin-left: 100px; 
+    }
+
 .production-item2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-right: 10px; 
+  padding-left: 0px;;
 }
 
 .production-item2 img {
-  width: 100px; 
+  width: 100px;
   height: auto;
-  margin-left: 10px;
+  margin-right: 20px; 
+  order: 1; 
+  border-radius: 8px;
+}
+
+.production-item2 p {
+  margin: 0;
+  order: 0; 
+  font-size: 20px;
 }
 
 .collaborations {
   background-color: white;
   color: #0000FF;
   padding: 20px;
-  margin-top: 20px; /* Adiciona um espaçamento entre as seções */
+  margin-top: 20px; 
 }
 
 .collaborations h2 {
@@ -223,10 +251,18 @@
   box-sizing: border-box;
 }
 
-.copyright{
+.copyright {
   background-color: blue;
-  padding: 10px;
+  padding: 20px; 
+  margin-top: 180px; 
 }
+
+.copyright p {
+  margin: 0; 
+  color: white;
+  text-align: center; 
+}
+
 
 h2 {
   font-size: 50px;
@@ -299,8 +335,11 @@ h2 {
   
   
 <div class="our-productions">
-  <h2><span class="nossas">NOSSAS</span> <span class="producoes">PRODUÇÕES</span></h2>
-    <div class="production-item">
+  <div class="container-production">
+    <h2><span class="nossas">NOSSAS</span> <span class="producoes">PRODUÇÕES</span></h2>
+    <a href="#" class="botao-ver-todas">Ver Todas</a>
+  </div>
+  <div class="production-item">
       <img src="img/artistas/sandy.jpg" alt="Descrição da Imagem">
       <p>A trilha do filme "Quando Eu Era Vivo" de 2014 com Antonio Fagundes & Sandy possui música de autoria, arranjada e produzida por Hugo Bellard.</p>
     </div>
@@ -312,7 +351,7 @@ h2 {
       <img src="img/artistas/elizangela.jpg" alt="Descrição da Imagem">
       <p>Elizangela gravou a música mais vendida em compacto simples no Brasil em todos os tempos: "Pertinho de Você", em produção, arranjo e autoria de Hugo Bellard.</p>
     </div>
-    <div class="production-item">
+    <div class="production-item2">
       <img src="img/artistas/wando_mini.jpg" alt="Descrição da Imagem">
       <p>O cantor Wando gravou "Me Cace Me Ache", de Hugo Bellard e Paulo Sérgio Valle, além de outra música da dupla - "Não Posso Ser Teu Amigo".
         O album foi o de maior vendagem na carreira do Wando.</p>
@@ -321,7 +360,7 @@ h2 {
       <img src="img/artistas/peninhanew.jpg" alt="Descrição da Imagem">
       <p>O sucesso e disco de platina 'Sonhos' (peninha) é mais um arranjo de Hugo Bellard.</p>
     </div>
-    <div class="production-item">
+    <div class="production-item2">
       <img src="img/artistas/jose_augusto.jpg" alt="Descrição da Imagem">
       <p>O cantor José Augusto gravou seus primeiros grandes sucessos com arranjos de Hugo Bellard na Emi.
         Dois deles, a música "Meu Primeiro Amor" (Mi Primer Amor) e Candilejas, entraram na parada do México e na latina da Billboard vendendo mais de dois milhão de álbuns em 5 países.</p>
@@ -331,7 +370,7 @@ h2 {
       <p>Hugo Bellard fez o arranjo de "Você Não Me Ensinou a Te Esquecer" do Fernando Mendes que está ao lado dele na foto.
         A música foi mais tarde regravada pelo Caetano Veloso.</p>
     </div>
-    <div class="production-item">
+    <div class="production-item2">
       <img src="img/artistas/mariozinho_rocha.jpg" alt="Descrição da Imagem">
       <p>Mariozinho Rocha Até pouco tempo era o Diretor musical das novelas da TV Globo. Agora ocupa a presidência da ABRAMUS, Sociedade de Compositores ligada ao Ecade.
         Por isso ainda mantém uma grande influência no envio de músicas para as novelas.
@@ -343,7 +382,7 @@ h2 {
       <p>Nando e Kiko, da banda Roupa Nova, tendo ao centro o produtor e maestro Hugo Bellard, em foto recente na casa de um deles.
         Música de Hugo Bellard cantada pelo Serginho do Roupa Nova, entrou na novela Pecado Rasgado.</p>
     </div>
-    <div class="production-item">
+    <div class="production-item2">
       <img src="img/artistas/jorge_ben_jor.jpg" alt="Descrição da Imagem">
       <p>Com arranjos do maestro Hugo Bellard, responsável pelo site MusikCity, o album "Tábuas das Esmeraldas" de Jorge Ben Jor foi eleito pela revista inglesa Rolling Stones como um dos 6 melhores álbuns gravados no Brasil em todos os tempos.</p>
     </div>
@@ -446,9 +485,9 @@ h2 {
     <button style="border-radius: 20px; background-color: black; color: white; padding: 10px;">Ver Todos</button>
 </div>
 
-<div class="historia-container">
-    <h2><span class="nossa-title">A NOSSA</span> <span class="historia-title">HISTÓRIA</span></h2>
-    <p>Alguns exemplos dos arranjos, produções, autorias, teclados e participações nas gravações do produtor e maestro Hugo Bellard</p>
+<div class="historia-container" style="font-family: 'Open Sans', sans-serif;" >
+  <h2><span class="nossa-title">A NOSSA</span> <span class="historia-title">HISTÓRIA</span></h2>
+  <p style="color: white;">O produtor e maestro Hugo Bellard alcançou mais de 20 milhões de discos de ouro e platina como arranjador, produtor, autor e maestro, trabalhando para as grandes gravadoras do Brasil e algumas do exterior.Diante do sucesso no meio musical, ele fundou o site MusikCity® em 1997 com o objetivo de prestar os trabalhos que faz no meio musical também para amadores. Ou também para profissionais que ainda não alcançaram o tão almejado sucesso nas rádios, tvs, show ao vivo e outros segmentos que pagam o maior Ecad. Além dos arranjos e gravações que o tornaram produtor/maestro de sucesso, o outro objetivo do site é utilizar os canais do maestro no meio musical para indicar novos talentos como cantores, bandas, compositores e letristas, sem limite máximo de idade. Essa indicação é feita diretamente para Produtores Musicais, Diretores de Gravadoras, Produção Musical das Novelas e Programas de Tv a Cabo, Editoras Musicais, selos e outros veículos importantes. Isso tanto no Brasil como para alguns locais no exterior.</p>
 </div>
 <div class="collaborations-grid-historia">
   <div class="collaboration-item-historia">
@@ -480,9 +519,8 @@ h2 {
     </div>
   </div>
 </div>
-
 <div class="copyright">
-    <p>Copyright © 2023 Musikcity - Todos os direitos reservados.</p>
+  <p>Copyright © 2023 Musikcity - Todos os direitos reservados.</p>
 </div>
 </body>
 </html>
